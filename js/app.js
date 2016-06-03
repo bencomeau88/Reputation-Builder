@@ -37,7 +37,10 @@ var showInspiration = function(item){
 	var inspirationElem = results.find('.user a');
 	inspirationElem.attr('href', item.user.link);
 	inspirationElem.text(item.user.display_name);
-	
+
+	var image = "<img src='" + item.user.profile_image + "'alt='" + item.user.display_name + "'>"  
+	$('.user').append(image);
+
 	results.find('.post_count').text(item.post_count);
 	results.find('.score').text(item.score);
 	return results;
